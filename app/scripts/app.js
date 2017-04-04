@@ -6,9 +6,10 @@
             requireBase: false
         });
         $stateProvider
-         .state('home', {
-             url: '/',
-             templateUrl: '/pages/main.html'
+            .state('home', {
+            url: '/',
+            controller: 'RoomCtrl as room',
+            templateUrl: '/templates/home.html'
          });
     }
  
@@ -16,5 +17,3 @@
          .module('blocChat', ['ui.router', 'firebase'])
          .config(config);
  })();
-
-

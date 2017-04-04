@@ -1,0 +1,19 @@
+.container {
+    margin: 0 auto;
+    max-width: 64rem;
+}
+
+.container.narrow {
+    max-width: 56rem;
+    left: 2rem;
+    cursor: pointer;
+    
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
