@@ -14,6 +14,7 @@ section{
     border: 0;
     margin: 0;
     padding: 0;
+    min-width: 350px;
 }
 body{
     background-color:rgb(192, 210, 197);  
