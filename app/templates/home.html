@@ -1,17 +1,23 @@
-<section class="chat-room container clearfix">
-
-    <!-- all the text below this is from collection.html and is a placeholder -->
-    <div class="collection-album-container column fourth">
-        <img src="{{ album.albumArtUrl }}"/>
-        <div class="collection-album-info caption">
-            <p>
-                <a class="album-name" ui-sref="album">{{ album.title }}</a>
-                <br/>
-                <a ui-sref="album">{{ album.artist }}</a> 
-                <br/>
-                {{ album.songs.length }} songs
-                <br/>
-            </p>
+<html>
+<body>
+    <section>
+        <h1>Bloc Chat</h1>
+        <div class="style container clearfix" ng-repeat="room in roomCtrl.rooms">
+            {{room}}  
         </div>
-    </div>
-</section>
+    </section>
+</body>
+</html>
+<!-- 
+a = [5, 4, 1, 8]
+i = 2
+x = a[i]
+
+for (var i = 0; i < a.length; i++) {
+  console.log(a[i]);
+}
+                             
+for (var i = 0; i < roomCtrl.rooms.length; i++) {
+  room = roomCtrl.rooms[i];
+  console.log(room);
+} -->

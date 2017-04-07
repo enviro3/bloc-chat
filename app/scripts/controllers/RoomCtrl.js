@@ -1,8 +1,9 @@
 (function() {
     function RoomCtrl(Room){
-        this.roomData = Room;
-        console.log(Room.all);
-        console.log(Room.all[0]);
+        this.rooms = Room.all; //transferring the array
+        //this.roomData = Room;
+        //console.log(Room.all);
+        //console.log(Room.all[0]);
     }
     
     angular
