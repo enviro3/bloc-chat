@@ -1,7 +1,25 @@
+#heading{
+    display: inline;
+    overflow: hidden;
+}
+.btn-primary{
+    width: 100px;
+    background-color: green;
+    padding:20px;
+    margin:35px;
+    float: right;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+.row{
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 20;
+}
+
 h1{
     font-size: 50px;
-    margin: 0;
-    padding-top: 0;
+    text-align-last: center;
 }
 html{
     height: 100%;
@@ -10,7 +28,7 @@ html{
 section{
     background-color: aquamarine;
     height: 100%;
-    width: 26%;
+    width: 400px;
     border: 0;
     margin: 0;
     padding: 0;
@@ -28,12 +46,14 @@ body{
 }
 
 .style{
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-left: 30px;
     color: black;
     font-size: 2rem;
     padding-bottom: 5px;
-    text-indent: 25px;
 }
+
+
 
 h1{
     padding-top: 25px;
