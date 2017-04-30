@@ -1,7 +1,7 @@
 (function() {
-    function CreateRoomCtrl(Room, $uibModalInstance){
-        this.rooms = Room.all; //transferring the array
-        this.add = Room.add; 
+    function CreateRoomCtrl(RoomService, $uibModalInstance){
+        this.rooms = RoomService.all; //transferring the array
+        this.add = RoomService.add; 
         
         this.ok = function () {
             if(this.text === ""){
@@ -21,5 +21,5 @@
     
     angular
         .module('blocChat')
-        .controller('CreateRoomCtrl', ['Room','$uibModalInstance',CreateRoomCtrl]);
+        .controller('CreateRoomCtrl', ['RoomService','$uibModalInstance',CreateRoomCtrl]);
 })();

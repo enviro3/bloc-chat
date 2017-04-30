@@ -11,29 +11,59 @@
     margin-bottom: 0;
     padding-bottom: 5px;
 }
-.row{
+.buttonrow{
     font-size: 14px;
     font-weight: bold;
     margin-right: 20;
 }
 
+.chatheight{
+    height: 100%;
+}
+
+.col-sm-2{
+    height: 100%;
+    margin-top: -4;
+    padding-top: -4;
+}
+
+.col-sm-10{
+    height: 100%; 
+}
+
+h3{
+    float: left;
+    position: relative;
+    margin: 0;
+}
+
 h1{
     font-size: 50px;
     text-align-last: center;
+    margin-top:0;
+    padding-top: 0;
 }
 html{
     height: 100%;
 }
 
-section{
+section.sidebar{
     background-color: aquamarine;
     height: 100%;
-    width: 400px;
+    width: 100%;
     border: 0;
     margin: 0;
     padding: 0;
-    min-width: 350px;
 }
+
+section.chatcontainer{
+    height: 100%;
+    width: 70%;
+    float: right;
+    text-align: center;
+    
+}
+
 body{
     background-color:rgb(192, 210, 197);  
     height: 100%;
@@ -53,11 +83,15 @@ body{
     padding-bottom: 5px;
 }
 
-
-
 h1{
     padding-top: 25px;
     color: blue;
     font-family: Gothic;
     text-indent: 30px;
 }
+.col-md-10 p{
+    color: green;
+    padding-top: 40%;
+    float: left; 
+}
+
