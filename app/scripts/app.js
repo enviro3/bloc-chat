@@ -10,7 +10,6 @@
             url: '/',
             controller: 'RoomCtrl as roomCtrl',
             templateUrl: '/templates/home.html'
-            
          });
     }
  
