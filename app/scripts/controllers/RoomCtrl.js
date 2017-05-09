@@ -1,7 +1,24 @@
 (function() {
-    function RoomCtrl(RoomService, $uibModal, MessageService){
+    function RoomCtrl(RoomService, $uibModal, MessageService, $cookies){
         this.rooms = RoomService.all; //transferring the array
         this.add = RoomService.add;
+        this.text = "";
+        
+        this.send = function(){
+            var message = {
+                content: this.text,
+                sentAt: Date.now(),
+                username: $cookies.get('blocChatCurrentUser'),
+                roomid: this.currentRoom.$id
+            };
+            if(this.text === ""){
+               return;
+            }
+            MessageService.send(message);
+            this.text = "";
+        }
+        
+            
     
         this.createPopUp = function(){
             var modalInstance = $uibModal.open({
@@ -20,5 +37,5 @@
        
     angular
         .module('blocChat')
-        .controller('RoomCtrl', ['RoomService', '$uibModal', 'MessageService', RoomCtrl]);
+        .controller('RoomCtrl', ['RoomService', '$uibModal','MessageService','$cookies', RoomCtrl]);
 })();

@@ -56,12 +56,11 @@ section.sidebar{
     padding: 0;
 }
 
-section.chatcontainer{
+section.message-header{
     height: 100%;
     width: 70%;
     float: right;
-    text-align: center;
-    
+    text-align: center; 
 }
 
 body{
@@ -69,10 +68,6 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-@font-face{
-    font-family: 
 }
 
 .style{
@@ -95,3 +90,28 @@ h1{
     float: left; 
 }
 
+.message-body .username{
+    font-weight: bold;
+}
+
+section.message-sender{
+    color: pink;
+}
+
+.chatWindow{
+    width: 100%;
+}
+
+.container.col-md-10{
+    float: right;
+}
+
+input.chatWindow{
+    width: 175%;
+}
+button.btn-primary.send{
+    float: right;
+    padding-top: 0;
+    margin-top: 0;
+    
+}

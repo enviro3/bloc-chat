@@ -11,34 +11,52 @@
                 </span>
                 <script type="text/javascript">
                     $('userPrompt').modal('show');
-                    console.log("hi");
                 </script>
                 <div class="style container" ng-repeat="room in roomCtrl.rooms">
-                    <p><a ng-click="roomCtrl.selectRoom(room)">{{room.$value}}</a></p>      
+                    <p><a ng-click="roomCtrl.selectRoom(room)">{{room.$value}}{{message.content}}</a>
+                    </p>      
                 </div>
             </section>
         </div>
         <div class="col-md-10" > 
-            <section class="chatcontainer">
+            <section class="message-header">
                 <h3>{{roomCtrl.currentRoom.$value}}</h3>
             </section>
-
-            <table class="table table-striped">
-                <tbody>
-                    <tr ng-repeat="message in roomCtrl.messages">
-                        <td>
-                            <strong>{{message.username}}</strong><br>
-                            {{message.content}}
-                            
-                        </td>
-                        <td></td>
-                        <td>
-                            {{message.sentAt|date:'yyyy-MM-dd HH:mm:ss'}}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <section class="message-body">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr ng-repeat="message in roomCtrl.messages">
+                            <td class= "username">
+                                {{message.username}}
+                            </td> <br>
+                            <td class="message-content">
+                                {{message.content}}
+                            </td>
+                            <td>
+                                {{message.sentAt|date:"MM/dd/yyyy 'at' h:mma"}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>  
         </div>
+        <nav class="navbar navbar-fixed-bottom">
+            <div class="container col-md-10">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="text" name="inputChat" class="chatWindow" placeholder="Write your message here" ng-model="roomCtrl.text">
+                            </td>
+                            <td>
+                                 <button class="btn-primary send" type="button" ng-click="roomCtrl.send(content)">Send</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </nav>
+                
     </div>
 </body>
 </html>
